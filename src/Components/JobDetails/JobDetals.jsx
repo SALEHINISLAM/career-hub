@@ -12,7 +12,7 @@ const JobDetals = props => {
     return (
         <div>
             {/* <h2>job Details of</h2> */}
-            <div className="py-24 bg-[#FAF8FF]" id='back1'>
+            <div className="py-32 bg-[#FAF8FF]" id='back1'>
                 <h2 className='text-4xl font-extrabold text-center'>Job Details</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 container mx-auto">

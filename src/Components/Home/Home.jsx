@@ -6,7 +6,7 @@ import FeaturedJobs from '../FeaturedJobs/FeaturedJobs';
 
 const Home = props => {
     return (
-        <div>
+        <div className='bg-white text-black'>
             <Banner></Banner>
             <CategoryList/>
             <FeaturedJobs></FeaturedJobs>
