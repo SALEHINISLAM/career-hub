@@ -10,7 +10,7 @@ const Home = props => {
             <Banner></Banner>
             <CategoryList/>
             <FeaturedJobs></FeaturedJobs>
-            <h1>Home</h1>
+            {/* <h1>Home</h1> */}
         </div>
     );
 };
