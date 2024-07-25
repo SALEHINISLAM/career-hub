@@ -4,6 +4,7 @@ import Job from "../Job/Job";
 
 const FeaturedJobs = props => {
     const [jobs,setJobs]=useState([]);
+    //this is not the best way to load data
   useEffect(()=>{
     fetch('/data/jobs.json')
     .then(response=>response.json())
