@@ -12,7 +12,8 @@ const FeaturedJobs = props => {
     .then(data=>setJobs(data))
   },[])
     return (
-        <div className="container mx-auto flex flex-col space-y-8">
+        <div className="bg-white text-black">
+            <div className="container mx-auto flex flex-col space-y-8 pt-20 ">
             <h2 className='text-5xl font-bold text-center'>Featured Jobs</h2>
             <p className='text-center text-base'>Explore thousands of job opportunities with all the information you need. Its your future</p>
             <div className="grid grid-cols-1 md:grid-cols-2">
@@ -31,6 +32,8 @@ const FeaturedJobs = props => {
                 </button>
             </div>
         </div>
+        </div>
+        
     );
 };
 
