@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const Job = ({ job }) => {
   const {
+    id,
     logo,
     job_title,
     remote_or_onsite,
@@ -65,7 +67,8 @@ const Job = ({ job }) => {
           <p className="text-xl font-semibold">Salary: {salary}</p>
         </div>
       </div>
-    <button className="bg-gradient-to-br from-[#7E90FE] to-[#9873FF] text-white rounded-xl p-4 text-xl font-extrabold">View Details</button>
+    <Link to={`/job/${id}`}>
+    <button className="bg-gradient-to-br from-[#7E90FE] to-[#9873FF] text-white rounded-xl p-4 text-xl font-extrabold">View Details</button></Link>
     </div>
   );
 };
