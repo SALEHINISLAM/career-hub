@@ -1,7 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
+import './Navbar.css'
 
 const Navbar = (props) => {
+    const links=<>
+    <li><NavLink to="/" id="side">Home</NavLink></li>
+    <li><NavLink to="/jobs" id="side">Jobs</NavLink></li>
+    <li><NavLink to="/statistics">Statistics</NavLink></li>
+    <li><NavLink to="/applied" id="side">Applied Jobs</NavLink></li>
+    <li><NavLink to="/blogs" id="side">Blogs</NavLink></li>
+    </>
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -26,52 +35,22 @@ const Navbar = (props) => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            {
+                links
+            }
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="btn btn-ghost text-xl">CareerHub</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
+          {
+            links
+          }
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className="btn">Start Applying</a>
       </div>
     </div>
   );
