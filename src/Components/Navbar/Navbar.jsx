@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import './Navbar.css'
 
 const Navbar = (props) => {
+  
     const links=<>
     <li><NavLink to="/" id="side">Home</NavLink></li>
     <li><NavLink to="/jobs" id="side">Jobs</NavLink></li>
@@ -40,7 +41,9 @@ const Navbar = (props) => {
             }
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">CareerHub</a>
+        <a className="btn btn-ghost text-xl">
+          <img src="/assets/logo/CareerHub.png" alt="" />
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
