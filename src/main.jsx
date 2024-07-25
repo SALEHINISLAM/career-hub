@@ -4,8 +4,6 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-
-import App from './App.jsx'
 import './index.css'
 import Root from './Components/Root/Root.jsx';
 import AppliedJobs from './Components/AppliedJobs/AppliedJobs.jsx';
