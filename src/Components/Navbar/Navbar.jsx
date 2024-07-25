@@ -13,7 +13,7 @@ const Navbar = (props) => {
     <li><NavLink to="/blogs" id="side">Blogs</NavLink></li>
     </>
   return (
-    <div className="navbar fixed bg-[#FAF8FF] bg-opacity-50 py-4">
+    <div className="navbar fixed bg-[#FAF8FF] bg-opacity-50 py-4 text-black">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
