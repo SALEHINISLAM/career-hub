@@ -8,12 +8,12 @@ const Navbar = (props) => {
     const links=<>
     <li><NavLink to="/" id="side">Home</NavLink></li>
     <li><NavLink to="/jobs" id="side">Jobs</NavLink></li>
-    <li><NavLink to="/statistics">Statistics</NavLink></li>
+    <li><NavLink to="/statistics" id="side">Statistics</NavLink></li>
     <li><NavLink to="/applied" id="side">Applied Jobs</NavLink></li>
     <li><NavLink to="/blogs" id="side">Blogs</NavLink></li>
     </>
   return (
-    <div className="navbar fixed bg-[#FAF8FF] bg-opacity-50 py-4 text-black">
+    <div className="navbar fixed bg-[#FAF8FF] bg-opacity-50 py-4 text-black md:px-8">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

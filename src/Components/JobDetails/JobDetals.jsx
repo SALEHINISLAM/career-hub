@@ -5,6 +5,10 @@ import "./JobDetails.css";
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { MdOutlineLocalPhone } from "react-icons/md";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from "../../Utility/localStorage";
+
 const JobDetals = (props) => {
   const jobs = useLoaderData();
   const { id } = useParams();
@@ -18,6 +22,10 @@ const JobDetals = (props) => {
     salary,
     contact_information,job_title
   } = job;
+  const handleApplyJob=()=>{
+    saveJobApplication(parseInt(id));
+    toast('You have applied Successfully!')
+  }
   return (
     <div className="bg-white">
       {/* <h2>job Details of</h2> */}
@@ -88,12 +96,17 @@ const JobDetals = (props) => {
             </div>
           </div>
           <div className="">
-            <button className="bg-gradient-to-br from-[#7E90FE] to-[#9873FF] text-white rounded-xl p-4 text-xl font-extrabold w-full">
+            <button 
+            className="bg-gradient-to-br from-[#7E90FE] to-[#9873FF] text-white rounded-xl p-4 text-xl font-extrabold w-full"
+            onClick={()=>handleApplyJob()}
+            >
               Apply Now
             </button>
           </div>
         </div>
       </div>
+      <ToastContainer />
+
     </div>
   );
 };
