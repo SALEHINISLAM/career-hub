@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import './Navbar.css'
 
 const Navbar = (props) => {
@@ -53,7 +53,10 @@ const Navbar = (props) => {
         </ul>
       </div>
       <div className="navbar-end">
+        <Link to='/jobs'>
         <a className="bg-gradient-to-br from-[#7E90FE] to-[#9873FF] text-white rounded-xl p-4 text-xl font-extrabold">Start Applying</a>
+        </Link>
+        
       </div>
     </div>
   );

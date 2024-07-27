@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { useLoaderData } from "react-router-dom";
 import { getStoredJobApplication } from "../../Utility/localStorage";
 import Job from "../Job/Job";
+import NoJob from "./NoJob";
 
 const AppliedJobs = (props) => {
   const jobs = useLoaderData();
@@ -36,16 +37,16 @@ const AppliedJobs = (props) => {
     }
   }, [jobs]);
   return (
-    <div>
+    <div className="bg-white text-black">
       <div className="py-32 bg-[#FAF8FF]" id="back1">
         <h2 className="text-4xl font-extrabold text-center text-black">
           Jobs I applied
         </h2>
       </div>
       <div className="flex justify-end">
-      <details className="dropdown container mx-auto">
-        <summary className="btn m-1">Filter</summary>
-        <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+      <details className="dropdown container mx-auto m-3">
+        <summary className="btn m-1 bg-gray-300 btn-ghost">Filter</summary>
+        <ul className="menu dropdown-content bg-white rounded-box z-[1] w-52 p-2 shadow">
           <li
           onClick={()=>handleJobFilter('all')}>
             <a>All</a>
@@ -64,10 +65,12 @@ const AppliedJobs = (props) => {
       </div>
       
       <div className="container mx-auto">
-        <ul>
-          {displayJobs.map((job) => (
+        <ul className="grid grid-cols-1 md:grid-cols-2 m-2">
+          {
+            displayJobs.length==0? <NoJob/>:displayJobs.map((job) => (
             <Job key={job.id} job={job} />
-          ))}
+          ))
+          }
         </ul>
       </div>
     </div>
